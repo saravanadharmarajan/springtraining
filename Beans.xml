@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="FirstBean" class="com.training.spring.basics.FirstBean" >
+             
+                <constructor-arg value="Training"/>
+                  <property name="secondprop" value="Spring Training">
+                </property> 
+
+        </bean>
+        
+         <bean id="BookingServiceImplementation" class="com.training.spring.beans.SpringBookingImpl" >
+             
+               <property name="bookingServ">
+               		<ref bean="carbooking"/>
+               </property>
+          </bean>
+       
+        <bean id="carbooking" class="com.training.spring.beans.CarBookingServiceImpl">
+                 </bean>
+		 
+		 
+		 <bean id="twowheelerbooking" class="com.training.spring.beans.TwoWheelerBookingServiceImpl">
+                 </bean>
+       
+
+ </beans>
